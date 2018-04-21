@@ -1,16 +1,15 @@
 ####用户注册
-**APP>>>Post**:
+**APP>>>Server**:
 {
-"Request":"signup",
+"POST":"/signup",
 "body":{
-         "Username":"nnnn",
-         "Passwd":"pppp",
-         "Email":"eeee@mmm",
-         "Career":"Macxxxxxxx"
+         "username":"nnnn",
+         "password":"pppp",
+         "email":"eeee@mmm",
+         "career":"Macxxxxxxx"
        }
 }
-
-**Post>>>APP**:
+**Server>>>APP**:
 {
 "errCode":"0000",
 "errInfo":"Success",
@@ -18,16 +17,16 @@
 }
 
 #### 用户登录
-**APP>>POST**:
+**APP>>Server**:
 {
-"Request":"login",
+"POST":"/login",
 "body":{
-         "Username":"nnnn",
-         "PasswdHash":"pppp"
+         "username":"nnnn",
+         "password":"pppp"
        }
 }
 
-**Post>>>APP**:
+**Server>>>APP**:
 {
 "errCode":"0000",
 "errInfo":"Success",
@@ -35,42 +34,47 @@
 }
 
 #### 用户选择“测试”
-**APP>>POST**:
+**APP>>Server**:
 {
-"Request":"test",
+"GET":"/test",
 "body":{
-         "Username":"nnnn"
+         "username":"nnnn"
        }
 }
 
-**Post>>>APP**:
+**Server>>>APP**:
 {
 "errCode":"0000",
 "errInfo":"Success",
-"body":{
-        "QID1":{
-                "Description":"xxxx",
-                "OptionA":"aaaaa",
-                "OptionB":"bbbbb",
-                "OptionC":"ccccc",
-                "OptionD":"I don't know"
-                "Answer":"A"
+"test":{
+        "1":{
+                "description":"xxxx",
+                "optionA:"aaaaa",
+                "optionB":"bbbbb",
+                "optionC":"ccccc",
+                "optionD":"I don't know"
                }
+         "2": {
+         ....
+         }
+         ....
        }
 }
 
 用户完成测试并提交测试:
-**APP>>POST**:
+**APP>>Server**
 {
-"Request":"result",
+"POST":"/test",
 "body":{
          "Username":"nnnn",
-         "QID1":"True",       --True for correct answer, False for wrong answer
-         "QID2":"False"
+         "1":"A",       --QID is Int
+         "2":"B",
+         "3":"C",
+         "4":"D",
        }
 }
 
-**Post>>>APP**:
+**Server>>>APP**:
 {
 "errCode":"0000",
 "errInfo":"Success",
@@ -78,20 +82,20 @@
 }
 
 用户选择查看技能树
-**APP>>POST**:
+**APP>>Server**:
 {
-"Request":"skilltree",
+"GET":"/skilltree",
 "body":{
-         "Username":"nnnn"
+         "username":"nnnn"
        }
 }
 
-**Post>>>APP**:
+**Server>>>APP**:
 {
 "errCode":"0000",
 "errInfo":"Success",
 "body":{
-        "Career":"UserCareer",
-        "Learned":[PID]
+        "career":"UserCareer",
+        "learned":[PID]
        }
 }
