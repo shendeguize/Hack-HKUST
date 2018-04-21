@@ -2,7 +2,7 @@
 **APP>>>Post**:
 {
 "Request":"signup",
-"data":{
+"body":{
          "Username":"nnnn",
          "Passwd":"pppp",
          "Email":"eeee@mmm",
@@ -14,14 +14,14 @@
 {
 "errCode":"0000",
 "errInfo":"Success",
-"data":"True"         --True for Successed, False for Failed
+"body":"True"         --True for Successed, False for Failed
 }
 
 #### 用户登录
 **APP>>POST**:
 {
 "Request":"login",
-"data":{
+"body":{
          "Username":"nnnn",
          "PasswdHash":"pppp"
        }
@@ -31,14 +31,14 @@
 {
 "errCode":"0000",
 "errInfo":"Success",
-"data":"True"         --True for Successed, False for Failed
+"body":"True"         --True for Successed, False for Failed
 }
 
 #### 用户选择“测试”
 **APP>>POST**:
 {
 "Request":"test",
-"data":{
+"body":{
          "Username":"nnnn"
        }
 }
@@ -47,7 +47,7 @@
 {
 "errCode":"0000",
 "errInfo":"Success",
-"data":{
+"body":{
         "QID1":{
                 "Description":"xxxx",
                 "OptionA":"aaaaa",
@@ -63,7 +63,7 @@
 **APP>>POST**:
 {
 "Request":"result",
-"data":{
+"body":{
          "Username":"nnnn",
          "QID1":"True",       --True for correct answer, False for wrong answer
          "QID2":"False"
@@ -74,14 +74,14 @@
 {
 "errCode":"0000",
 "errInfo":"Success",
-"data":"True"                -- True for successfully updated, False for Failed
+"body":"True"                -- True for successfully updated, False for Failed
 }
 
 用户选择查看技能树
 **APP>>POST**:
 {
 "Request":"skilltree",
-"data":{
+"body":{
          "Username":"nnnn"
        }
 }
@@ -90,7 +90,7 @@
 {
 "errCode":"0000",
 "errInfo":"Success",
-"data":{
+"body":{
         "Career":"UserCareer",
         "Learned":[PID]
        }
