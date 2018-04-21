@@ -1,10 +1,10 @@
 ####用户注册
 **APP>>>Post**:
 {
-"Request":"Register",
+"Request":"signup",
 "data":{
          "Username":"nnnn",
-         "PasswdHash":"pppp",
+         "Passwd":"pppp",
          "Email":"eeee@mmm",
          "Career":"Macxxxxxxx"
        }
@@ -20,7 +20,7 @@
 #### 用户登录
 **APP>>POST**:
 {
-"Request":"Login",
+"Request":"login",
 "data":{
          "Username":"nnnn",
          "PasswdHash":"pppp"
@@ -37,7 +37,7 @@
 #### 用户选择“测试”
 **APP>>POST**:
 {
-"Request":"Test",
+"Request":"test",
 "data":{
          "Username":"nnnn"
        }
@@ -62,7 +62,7 @@
 用户完成测试并提交测试:
 **APP>>POST**:
 {
-"Request":"Result",
+"Request":"result",
 "data":{
          "Username":"nnnn",
          "QID1":"True",       --True for correct answer, False for wrong answer
@@ -80,7 +80,7 @@
 用户选择查看技能树
 **APP>>POST**:
 {
-"Request":"SkillTree",
+"Request":"skilltree",
 "data":{
          "Username":"nnnn"
        }
