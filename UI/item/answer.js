@@ -1,7 +1,0 @@
-/**
- * CSS3 答题卡翻页效果 jQuery Transit 
- * @authors Candice <286556658@qq.com>
- * @date    2016-9-27 15:30:18
- * @version 1.0.8
- */
-$.fn.answerSheet = function(options) {var defaults={mold:'cardd',};var opts = $.extend({},defaults,options);return $(this).each(function(){var obj = $(this).find('.cardd_cont');var _length = obj.length,_b = _length -1,_len = _length - 1, _cont = '.cardd_cont';for(var a = 1; a <= _length; a++){obj.eq(_b).css({'z-index':a});_b-=1;}$(this).show();if(opts.mold == 'cardd'){obj.find('ul li label').click(function(){var _idx =  $(this).parents(_cont).index(),_cardds =  obj,_carddcont = $(this).parents(_cont);if(_idx == _len){return;}else{setTimeout(function(){_carddcont.addClass('carddn');setTimeout(function(){_cardds.eq(_idx + 3).addClass('cardd3');_cardds.eq(_idx + 2).removeClass('cardd3').addClass('cardd2');_cardds.eq(_idx + 1).removeClass('cardd2').addClass('cardd1');_carddcont.removeClass('cardd1');},200);},100);}});$('.cardd_bottom').find('.prev').click(function(){var _idx =  $(this).parents(_cont).index(), _carddcont = $(this).parents(_cont);obj.eq(_idx + 2).removeClass('cardd3').removeClass('carddn');obj.eq(_idx + 1).removeClass('cardd2').removeClass('carddn').addClass('cardd3');obj.eq(_idx).removeClass('cardd1').removeClass('carddn').addClass('cardd2');setTimeout(function(){obj.eq(_idx - 1).addClass('cardd1').removeClass('carddn');},200);})}});};
