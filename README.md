@@ -1,5 +1,5 @@
 ## Hackathon@HKUST
-![AI Learning Advisor](https://github.com/shendeguize/Pics/blob/master/2018.04.22/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180422123822.png)
+![AI Learning Advisor](https://github.com/shendeguize/Pics/blob/master/2018.04.22/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180422123822.png){:height="100px" width="100px"}
 
 ### AI Learning Advisor
 *by **Bottom Level@HKUST***   
