@@ -1,6 +1,6 @@
 ## Hackathon@HKUST
 ### AI Learning Advisor
-*by Bottom Level @ HKUST*   
+*by **Bottom Level@HKUST***   
 *EducationTech@HKUST*
 #### Learning Path Director and Skill Tree Manager
 
