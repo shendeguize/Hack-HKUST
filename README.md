@@ -3,6 +3,7 @@
 *by **Bottom Level@HKUST***   
 *EducationTech@HKUST*
 #### Learning Path Director and Skill Tree Manager
+![AI Learning Advisor](https://github.com/shendeguize/Pics/blob/master/2018.04.22/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180422123822.png)
 
 [**Click and Try**](http://3.jlusc.applinzi.com/index.html)   
 *Better on Mobile*
